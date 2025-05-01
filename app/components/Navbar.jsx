@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { assets } from "@/assets/assets";
 import { useRef } from "react";
+import { useTheme } from "next-themes";
 
 const Navbar = () => {
   const [isSroll, setIsScroll] = useState(false);
   const sideMenuRef = useRef();
+  const { theme, setTheme } = useTheme("light");
 
   const openMenu = () => {
     sideMenuRef.current.style.transform = "translateX(-16rem)";
@@ -26,20 +28,20 @@ const Navbar = () => {
   }, []);
   return (
     <>
-      <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
+      <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
         <Image src={assets.header_bg_color} alt="" className="w-ful" />
       </div>
       <nav
         className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 
           ${
             isSroll
-              ? "bg-[rgba(255,255,255,0.62)] backdrop-blur-lg shadow-sm"
+              ? "bg-[rgba(255,255,255,0.62)] backdrop-blur-lg shadow-sm dark:bg-transparent dark:shadow-white/20"
               : ""
           }`}
       >
         <a href="#top">
           <Image
-            src={assets.logo}
+            src={theme === "dark" ? assets.logo_dark : assets.logo}
             alt="Logo"
             className="w-28 cursor-pointer mr-14 "
           />
@@ -47,7 +49,9 @@ const Navbar = () => {
         <ul
           className={`hidden md:flex items-center gap-6 lg:gap-8 
         rounded-full px-12 py-3 ${
-          isSroll ? "" : "shadow-sm bg-[rgba(255,255,255,0.62)]"
+          isSroll
+            ? ""
+            : "shadow-sm bg-[rgba(255,255,255,0.62)] dark:border dark:border-white/50 dark:bg-transparent"
         }`}
         >
           <li>
@@ -103,8 +107,17 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="flex items-center gap-4">
-          <button className="cursor-pointer ">
-            <Image src={assets.moon_icon} alt="" className="w-6" />
+          <button
+            className="cursor-pointer"
+            type="button"
+            aria-label="Toggle theme"
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          >
+            <Image
+              src={theme === "dark" ? assets.sun_icon : assets.moon_icon}
+              alt=""
+              className="w-6"
+            />
           </button>
           <a
             href="#contact"

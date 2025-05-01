@@ -45,14 +45,18 @@ const About = () => {
                 cursor-pointer hover:bg-[#f6eefa] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0px_#000] "
               >
                 <Image src={icon} alt={title} className="w-7 mt-3" />
-                <h3 className="my-4 font-semibold text-gray-700">{title}</h3>
-                <p className="text-gray-600 text-sm">{description}</p>
+                <h3 className="my-4 font-semibold text-gray-700 dark:text-gray-400">
+                  {title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                  {description}
+                </p>
               </li>
             ))}
           </ul>
 
           <h4
-            className="my-6 text-gray-700"
+            className="my-6 text-gray-700 dark:text-gray-400"
             style={{ fontFamily: "var(--fontOvo)" }}
           >
             Tools I use
