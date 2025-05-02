@@ -101,7 +101,7 @@ const Contact = () => {
           <motion.input
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1.2, duration: 0.6 }}
+            transition={{ delay: 1.2,  duration: 0.6 }}
             type="email"
             placeholder="Enter your email"
             className="flex-1 p-3 outline-none border-[0.5px]
