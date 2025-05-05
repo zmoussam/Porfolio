@@ -36,6 +36,7 @@ import send_icon from "./send-icon.png";
 import right_arrow_bold from "./right-arrow-bold.png";
 import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
 import footer_bg_color from "./footer-bg-color.png";
+import school_logo from "./school-logo.png";
 
 export const assets = {
   user_image,
@@ -76,11 +77,12 @@ export const assets = {
   right_arrow_bold,
   right_arrow_bold_dark,
   footer_bg_color,
+  school_logo
 };
 
 export const backgroundImage = {
   bgImage: "/footer-bg-color.png",
-}
+};
 
 export const workData = [
   {
@@ -138,8 +140,8 @@ export const infoList = [
   {
     icon: assets.code_icon,
     iconDark: assets.code_icon_dark,
-    title: "Languages",
-    description: "HTML, CSS, JavaScript React Js, Next Js",
+    title: "My Tech Stack",
+    description: "Typescript, Java, Python3, C/C++, Docker",
   },
   {
     icon: assets.edu_icon,
@@ -150,7 +152,7 @@ export const infoList = [
   {
     icon: assets.project_icon,
     iconDark: assets.project_icon_dark,
-    title: "Projects",
+    title: "Experience",
     description: "Built more than 5 projects",
   },
 ];
@@ -162,3 +164,5 @@ export const toolsData = [
   assets.figma,
   assets.git,
 ];
+
+export const schools_logos = [assets.school_logo];

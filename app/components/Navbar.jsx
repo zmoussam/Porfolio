@@ -3,7 +3,7 @@ import Image from "next/image";
 import { assets } from "@/assets/assets";
 import { useRef } from "react";
 import { useTheme } from "next-themes";
-
+import Link from "next/link";
 const Navbar = () => {
   const [isSroll, setIsScroll] = useState(false);
   const sideMenuRef = useRef();
@@ -39,13 +39,13 @@ const Navbar = () => {
               : ""
           }`}
       >
-        <a href="#top">
+        <Link href="/#top">
           <Image
             src={theme === "dark" ? assets.logo_dark : assets.logo}
             alt="Logo"
             className="w-28 cursor-pointer mr-14 "
           />
-        </a>
+        </Link>
         <ul
           className={`hidden md:flex items-center gap-6 lg:gap-8 
         rounded-full px-12 py-3 ${
@@ -55,55 +55,55 @@ const Navbar = () => {
         }`}
         >
           <li>
-            <a
-              href="#top"
+            <Link
+              href="/#top"
               className=""
               style={{
                 fontFamily: "var(--fontOvo)",
               }}
             >
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#about"
+            <Link
+              href="/#about"
               style={{
                 fontFamily: "var(--fontOvo)",
               }}
             >
               About me
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#services"
+            <Link
+              href="/#services"
               style={{
                 fontFamily: "var(--fontOvo)",
               }}
             >
               Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#work"
+            <Link
+              href="/#work"
               style={{
                 fontFamily: "var(--fontOvo)",
               }}
             >
               My work
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               style={{
                 fontFamily: "var(--fontOvo)",
               }}
             >
               Contact me
-            </a>
+            </Link>
           </li>
         </ul>
         <div className="flex items-center gap-4">
@@ -119,8 +119,8 @@ const Navbar = () => {
               className="w-6"
             />
           </button>
-          <a
-            href="#contact"
+          <Link
+            href="/#contact"
             className="hidden lg:flex items-center gap-3 px-10 py-2.5
             border border-gray-500 rounded-full ml-4 dark:text-gray-400"
             style={{
@@ -135,7 +135,7 @@ const Navbar = () => {
               alt="Arrow"
               className="w-3"
             />
-          </a>
+          </Link>
           <button
             className="block md:hidden ml-3 cursor-pointer"
             onClick={openMenu}
@@ -161,8 +161,8 @@ const Navbar = () => {
             />
           </div>
           <li>
-            <a
-              href="#top"
+            <Link
+              href="/#top"
               className=""
               style={{
                 fontFamily: "var(--fontOvo)",
@@ -170,49 +170,49 @@ const Navbar = () => {
               onClick={closeMenu}
             >
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#about"
+            <Link
+              href="/#about"
               style={{
                 fontFamily: "var(--fontOvo)",
               }}
               onClick={closeMenu}
             >
               About me
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#services"
+            <Link
+              href="/#services"
               style={{
                 fontFamily: "var(--fontOvo)",
               }}
               onClick={closeMenu}
             >
               Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#work"
+            <Link
+              href="/#work"
               style={{ fontFamily: "var(--fontOvo)" }}
               onClick={closeMenu}
             >
               {" "}
               My work{" "}
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               style={{ fontFamily: "var(--fontOvo)" }}
               onClick={closeMenu}
             >
               {" "}
               Contact me{" "}
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

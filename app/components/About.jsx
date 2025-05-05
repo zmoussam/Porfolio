@@ -3,8 +3,10 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 import { assets, infoList, toolsData } from "@/assets/assets";
 import { motion } from "motion/react";
+import Link from "next/link";
+import { HiArrowNarrowRight } from "react-icons/hi";
 
-const About = ({ isDarkMode }) => {
+const About = () => {
   const { theme } = useTheme();
   return (
     <motion.div
@@ -36,7 +38,7 @@ const About = ({ isDarkMode }) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="flex w-full flex-col lg:flex-row items-center justify-center gap-20 my-20"
+        className="flex w-full flex-col lg:flex-row items-center justify-center gap-20 mb-10"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -63,11 +65,12 @@ const About = ({ isDarkMode }) => {
             className="mb-10 max-w-2xl"
             style={{ fontFamily: "var(--fontOvo)" }}
           >
-            I am a software engineer with a passion for creating innovative
-            solutions. I specialize in web and mobile development, and I am
-            proficient in various programming languages and frameworks. I am
-            dedicated to delivering high-quality work and continuously improving
-            my skills.
+            Transform your ideas into reality with a software developer who’s
+            driven by innovation and results. I specialize in creating seamless,
+            high-performing applications that not only meet but exceed
+            expectations. With expertise in cutting-edge technologies, I turn
+            complex challenges into simple, scalable solutions. Let’s build
+            something extraordinary together!
           </motion.p>
 
           <motion.ul
@@ -77,25 +80,34 @@ const About = ({ isDarkMode }) => {
             className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl"
           >
             {infoList.map(({ icon, iconDark, title, description }, index) => (
-              <motion.li
-                whileHover={{ scale: 1.05 }}
-                key={index}
-                className="border-[0.5px] border-gray-400  rounded-xl p-6 
+              <Link href="/about/languages" className="block" key={index}>
+                <motion.li
+                  whileHover={{ scale: 1.05 }}
+                  className="relative min-h-[250px] border-[0.5px] border-gray-400 rounded-xl p-6 
                 cursor-pointer hover:bg-[#f6eefa] hover:-translate-y-1 duration-500 
                 hover:shadow-[4px_4px_0px_#000] dark:border-white dark:hover:shadow-white dark:hover:bg-[#1e1e1e]"
-              >
-                <Image
-                  src={theme === "dark" ? iconDark : icon}
-                  alt={title}
-                  className="w-7 mt-3"
-                />
-                <h3 className="my-4 font-semibold text-gray-700 dark:text-white">
-                  {title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  {description}
-                </p>
-              </motion.li>
+                >
+                  <Image
+                    src={theme === "dark" ? iconDark : icon}
+                    alt={title}
+                    className="w-7 mt-3"
+                  />
+                  <h3 className="my-4 font-semibold text-gray-700 dark:text-white">
+                    {title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    {description}
+                  </p>
+
+                  {/* "More" and icon */}
+                  <div className="absolute bottom-4 right-4 flex items-center space-x-2">
+                    <span className="text-gray-600 dark:text-gray-400 text-sm">
+                      More
+                    </span>
+                    <HiArrowNarrowRight className="text-gray-600 dark:text-gray-400 text-lg" />
+                  </div>
+                </motion.li>
+              </Link>
             ))}
           </motion.ul>
 

@@ -7,7 +7,7 @@ const Footer = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <div className="">
+    <div className="mt-10">
       <div className="text-center">
         <Image
           src={theme === "dark" ? assets.logo_dark : assets.logo}
@@ -24,7 +24,7 @@ const Footer = () => {
        justify-between border-t border-gray-400 mx-[10%] mt-12 py-6"
       >
         <p>© 2025 Zakaria Moussammi. All rights reserved.</p>
-        <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+        <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0 flex-wrap">
           <li>
             <a target="_blank" href="https://github.com/zmoussam">
               Github

@@ -41,7 +41,7 @@ const Contact = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="contact"
-      className="w-full px-[12%] py-10 h-screen scroll-mt-20 bg-no-repeat bg-center bg-cover bg-fixed"
+      className="w-full px-[12%] py-3 h-auto scroll-mt-20 bg-no-repeat bg-center bg-cover bg-fixed"
       style={{
         backgroundImage: `${
           theme === "dark" ? "none" : `url(${backgroundImage.bgImage})`
@@ -71,7 +71,7 @@ const Contact = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.7, duration: 0.5 }}
-        className="text-center max-w-2xl mx-auto mt-5 mb-12 "
+        className="text-center max-w-2xl mx-auto mt-3 mb-4 "
         style={{ fontFamily: "var(--fontOvo)" }}
       >
         I am always open to discussing new projects, creative ideas, or
@@ -86,7 +86,7 @@ const Contact = () => {
         className="max-w-2xl mx-auto"
         onSubmit={onSubmit}
       >
-        <div className="grid [grid-template-columns:repeat(auto-fit,minmax(200px,1fr))] gap-6 mt-10 mb-8">
+        <div className="grid [grid-template-columns:repeat(auto-fit,minmax(200px,1fr))] gap-6 mt-10 mb-6">
           <motion.input
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -101,7 +101,7 @@ const Contact = () => {
           <motion.input
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1.2,  duration: 0.6 }}
+            transition={{ delay: 1.2, duration: 0.6 }}
             type="email"
             placeholder="Enter your email"
             className="flex-1 p-3 outline-none border-[0.5px]
@@ -130,7 +130,7 @@ const Contact = () => {
         >
           Send Now <Image src={assets.right_arrow} alt="" className="w-4" />
         </motion.button>
-        <p className="- mt-4 text-gray-500">
+        <p className="mt-4 text-gray-500">
           {result} {}
         </p>
       </motion.form>
