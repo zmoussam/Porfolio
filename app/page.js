@@ -6,10 +6,12 @@ import Navbar from "./components/Navbar";
 import Services from "./components/Services";
 import Work from "./components/Work";
 import Footer from "./components/Footer";
+import NetworkBackground from "./components/Background";
 
 export default function Home() {
   return (
     <>
+      <NetworkBackground />
       <Navbar />
       <Header />
       <About />

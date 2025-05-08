@@ -31,6 +31,7 @@ import { SiTailwindcss } from "react-icons/si";
 import { SiAmazonapigateway } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
 import Navbar from "../../components/Navbar";
+import NetworkBackground from "@/app/components/Background";
 
 const categories = {
   Languages: [
@@ -196,12 +197,19 @@ const categories = {
 export default function LanguagesPage() {
   return (
     <>
+      <NetworkBackground />
       <Navbar />
       <div className="max-w-6xl mx-auto px-6 py-16 pt-30">
-        <h1 className="text-4xl font-bold mb-8 text-center text-gray-800 dark:text-white">
+        <h1
+          className="text-4xl font-bold mb-8 text-center text-gray-800 dark:text-white"
+          style={{ fontFamily: "var(--fontOvo)" }}
+        >
           My Tech Stack
         </h1>
-        <p className="text-center text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
+        <p
+          className="text-center text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto"
+          style={{ fontFamily: "var(--fontOvo)" }}
+        >
           Here's an overview of the technologies I use regularly to build
           full-stack, scalable, and modern applications.
         </p>
@@ -210,7 +218,7 @@ export default function LanguagesPage() {
             <motion.div
               key={index}
               whileHover={{ scale: 1.01 }}
-              className="bg-white dark:bg-[#1e1e1e] border border-gray-200 dark:border-gray-700 p-6 rounded-xl shadow hover:shadow-lg transition"
+              className=" p-6 rounded-xl mb-6 backdrop-blur-[2px] border-[0.5px]"
             >
               <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">
                 {category}

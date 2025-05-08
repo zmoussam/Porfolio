@@ -3,13 +3,14 @@ import React from "react";
 import { Si42 } from "react-icons/si";
 import { motion } from "framer-motion";
 import Navbar from "@/app/components/Navbar";
+import NetworkBackground from "@/app/components/Background";
 
 const educationData = [
   {
     title: "42 Network, Barcelona – 1337 Coding School",
     subtitle: "Member Rank: Level 13.62",
     description:
-      "After completing the Common Core at the 42 Network's Moroccan campus (1337), where I gained a strong foundation in C programming, algorithms, and system architecture, I transferred to 42 Barcelona to pursue the advanced curriculum. My focus here includes web development, cybersecurity, and software architecture through hands-on, project-based learning.",
+      "After completing the Common Core at the 42 Network's Moroccan campus (1337), where I gained a strong foundation in C programming, algorithms, Web Developement, and system architecture, I transferred to 42 Barcelona to pursue the advanced curriculum. My focus here includes DevOps, web development, cybersecurity, and software architecture through hands-on, project-based learning.",
     photo: "/42-banner.png", // ✅ Path to your big image
     links: [
       {
@@ -90,13 +91,20 @@ const educationData = [
 const Education = () => {
   return (
     <>
+      <NetworkBackground />
       <Navbar />
 
       <div className="max-w-7xl mx-auto py-10 px-5 pt-30">
-        <h2 className="text-4xl font-bold text-center mb-3 dark:text-white">
+        <h2
+          className="text-4xl font-bold text-center mb-3 dark:text-white"
+          style={{ fontFamily: "var(--fontOvo)" }}
+        >
           My Education
         </h2>
-        <p className="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10">
+        <p
+          className="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10"
+          style={{ fontFamily: "var(--fontOvo)" }}
+        >
           Here's a quick look at my educational journey, from coding bootcamps
           to formal university studies and language immersion programs.
         </p>
@@ -109,7 +117,7 @@ const Education = () => {
             }}
             transition={{ duration: 0.3 }}
             key={index}
-            className="bg-white dark:bg-[#1e1e1e] p-6 rounded-xl mb-6"
+            className=" p-6 rounded-xl mb-6  backdrop-blur-[2px] border-[0.5px]"
           >
             <div className="flex flex-col lg:flex-row gap-6">
               {/* Left: Text Content */}
@@ -163,8 +171,6 @@ const Education = () => {
                     ))}
                   </div>
                 </div>
-
-                {/* Logos */}
               </div>
 
               {/* Right: Photo (if available) */}

@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { assets } from "@/assets/assets";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 const Services = () => {
   return (
@@ -49,30 +50,34 @@ const Services = () => {
         className="grid [grid-template-columns:repeat(auto-fit,minmax(200px,1fr))] gap-4 my-10 "
       >
         {serviceData.map(({ icon, title, description, link }, index) => (
-          <motion.div
-            whileHover={{ scale: 1.05 }}
+          <Link
+            href={link}
             key={index}
-            className="border border-gray-400 rounded-lg px-8 py-12 
-                cursor-pointer hover:bg-[#f6eefa] hover:-translate-y-1 duration-500 
-                hover:shadow-[4px_4px_0px_#000] dark:hover:bg-[#1e1e1e] dark:hover:shadow-white"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <Image src={icon} alt={title} className="w-7 mt-3" />
-            <h3 className="my-4 text-lg font-semibold text-gray-700 dark:text-white">
-              {title}
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm">
-              {description}
-            </p>
-            <a
-              href={link}
-              className="text-sm mt-5 flex items-center gap-2"
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="border border-gray-400 rounded-lg px-8 py-12 
+                cursor-pointer hover:backdrop-blur-[5px]  hover:-translate-y-1 duration-500 
+                hover:shadow-[4px_4px_0px_#000] dark:hover:backdrop-blur-[5px]  dark:hover:shadow-white
+                w-full h-full flex flex-col justify-between  backdrop-blur-[2px] " // Added flex and full width/height
             >
-              Read more{" "}
-              <Image src={assets.right_arrow} alt="" className="w-4" />
-            </a>
-          </motion.div>
+              <div className="flex justify-start text-4xl text-indigo-600 mb-4">
+                {icon}
+              </div>
+              <h3 className="my-4 text-lg font-semibold text-gray-700 dark:text-white">
+                {title}
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
+                {description}
+              </p>
+              <div className="text-sm mt-5 flex items-center gap-2">
+                <span>Read more </span>
+                <Image src={assets.right_arrow} alt="" className="w-4" />
+              </div>
+            </motion.div>
+          </Link>
         ))}
       </motion.div>
     </motion.div>

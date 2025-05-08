@@ -6,7 +6,6 @@ import edu_icon_dark from "./edu-icon-dark.png";
 import project_icon from "./project-icon.png";
 import project_icon_dark from "./project-icon-dark.png";
 import vscode from "./vscode.png";
-import firebase from "./firebase.png";
 import figma from "./figma.png";
 import git from "./git.png";
 import mongodb from "./mongodb.png";
@@ -15,7 +14,7 @@ import logo from "./logo.png";
 import logo_dark from "./logo_dark.png";
 import mail_icon from "./mail_icon.png";
 import mail_icon_dark from "./mail_icon_dark.png";
-import profile_img from "./profile-img.jpg";
+import profile_img from "./90983110.jpg";
 import download_icon from "./download-icon.png";
 import hand_icon from "./hand-icon.png";
 import header_bg_color from "./header-bg-color.png";
@@ -36,7 +35,22 @@ import send_icon from "./send-icon.png";
 import right_arrow_bold from "./right-arrow-bold.png";
 import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
 import footer_bg_color from "./footer-bg-color.png";
-import school_logo from "./school-logo.png";
+import docker from "./docker.jpg";
+import next from "./nextjs.png";
+import nestjs from "./nestjs.png";
+import javascript from "./javascript.jpg";
+import html from "./html.png";
+import css from "./css.png";
+import python from "./python.png";
+import java from "./java.png";
+import postgresql from "./postgresql.png";
+import c from "./c.png";
+import graphql from "./graphql.png";
+import mysql from "./mysql.png";
+import linux from "./linux.png";
+import nodejs from "./nodejs.png";
+import { FaCode, FaCloud, FaCogs, FaTachometerAlt } from "react-icons/fa";
+import tailwindcss from "./tailwindcss.png";
 
 export const assets = {
   user_image,
@@ -47,7 +61,6 @@ export const assets = {
   project_icon,
   project_icon_dark,
   vscode,
-  firebase,
   figma,
   git,
   mongodb,
@@ -77,7 +90,21 @@ export const assets = {
   right_arrow_bold,
   right_arrow_bold_dark,
   footer_bg_color,
-  school_logo
+  docker,
+  next,
+  javascript,
+  nestjs,
+  html,
+  css,
+  python,
+  java,
+  postgresql,
+  c,
+  graphql,
+  mysql,
+  linux,
+  nodejs,
+  tailwindcss,
 };
 
 export const backgroundImage = {
@@ -109,29 +136,31 @@ export const workData = [
 
 export const serviceData = [
   {
-    icon: assets.web_icon,
-    title: "Web design",
-    description: "Web development is the process of building, programming...",
-    link: "",
-  },
-  {
-    icon: assets.mobile_icon,
-    title: "Mobile app",
+    icon: <FaCode />,
+    title: "Development Services",
     description:
-      "Mobile app development involves creating software for mobile devices...",
-    link: "",
+      "I offer a broad range of development services, including web, mobile, and backend development, creating scalable and reliable solutions for your business needs.",
+    link: "/services/development",
   },
   {
-    icon: assets.ui_icon,
-    title: "UI/UX design",
+    icon: <FaCloud />,
+    title: "Infrastructure & Operations",
     description:
-      "UI/UX design focuses on creating a seamless user experience...",
+      "I design and optimize infrastructure, ensuring reliable, secure, and scalable systems, from cloud setups to server management and performance optimization.",
     link: "",
   },
   {
-    icon: assets.graphics_icon,
-    title: "Graphics design",
-    description: "Creative design solutions to enhance visual communication...",
+    icon: <FaCogs />,
+    title: "Advanced Services",
+    description:
+      "I integrate AI, build real-time apps, and develop GraphQL APIs, while also providing secure authentication, authorization systems, and security optimizations.",
+    link: "",
+  },
+  {
+    icon: <FaTachometerAlt />,
+    title: "Product & Performance",
+    description:
+      "I improve product performance with optimized UI/UX design, ensuring both high performance and exceptional user experiences.",
     link: "",
   },
 ];
@@ -140,8 +169,8 @@ export const infoList = [
   {
     icon: assets.code_icon,
     iconDark: assets.code_icon_dark,
-    title: "My Tech Stack",
-    description: "Typescript, Java, Python3, C/C++, Docker",
+    title: "Skills",
+    description: "Typescript, Java, Python3, C/C++, Docker...",
   },
   {
     icon: assets.edu_icon,
@@ -159,10 +188,22 @@ export const infoList = [
 
 export const toolsData = [
   assets.vscode,
-  assets.firebase,
   assets.mongodb,
   assets.figma,
   assets.git,
+  assets.docker,
+  assets.html,
+  assets.next,
+  assets.nestjs,
+  assets.javascript,
+  assets.css,
+  assets.python,
+  assets.java,
+  assets.postgresql,
+  assets.c,
+  assets.graphql,
+  assets.mysql,
+  assets.linux,
+  assets.nodejs,
+  assets.tailwindcss,
 ];
-
-export const schools_logos = [assets.school_logo];

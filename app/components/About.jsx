@@ -38,25 +38,25 @@ const About = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="flex w-full flex-col lg:flex-row items-center justify-center gap-20 mb-10"
+        className="flex w-full flex-col lg:flex-row items-center  md:items-start justify-center gap-20 mb-10"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          className="w-64 sm:w-80 rounded-3xl max-w-none"
+          className="flex-none mt-10 max-w-[30%] sm:flex items-center sm:mx-auto rounded-3xl"
         >
           <Image
             src={assets.user_image}
             alt="user"
-            className="w-full rounded-3xl"
+            className="w-80 rounded-3xl"
           />
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className=""
+          className="w-full flex-grow"
         >
           <motion.p
             initial={{ opacity: 0 }}
@@ -77,15 +77,20 @@ const About = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1 }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl"
           >
             {infoList.map(({ icon, iconDark, title, description }, index) => (
-              <Link href="/about/languages" className="block" key={index}>
+              <Link
+                href={`/about/${title}`}
+                className="block"
+                key={index}
+                target="_blank"
+              >
                 <motion.li
                   whileHover={{ scale: 1.05 }}
                   className="relative min-h-[250px] border-[0.5px] border-gray-400 rounded-xl p-6 
-                cursor-pointer hover:bg-[#f6eefa] hover:-translate-y-1 duration-500 
-                hover:shadow-[4px_4px_0px_#000] dark:border-white dark:hover:shadow-white dark:hover:bg-[#1e1e1e]"
+                cursor-pointer hover:backdrop-blur-[5px]  hover:-translate-y-1 duration-500 
+                hover:shadow-[4px_4px_0px_#000] dark:border-white dark:hover:shadow-white  backdrop-blur-[2px]  dark:hover:backdrop-blur-[5px] "
                 >
                   <Image
                     src={theme === "dark" ? iconDark : icon}
@@ -115,29 +120,38 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.3, delay: 0.5 }}
-            className="my-6 text-gray-700 dark:text-white"
+            className="mt-4 mb-2 text-gray-700 dark:text-white"
             style={{ fontFamily: "var(--fontOvo)" }}
           >
             Tools I use
           </motion.h4>
-          <motion.ul
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1.5, delay: 0.6 }}
-            className="flex items-center gap-3 sm:gap-5 "
-          >
-            {toolsData.map((tool, index) => (
-              <motion.li
-                whileHover={{ scale: 1.1 }}
-                key={index}
-                className="flex items-center justify-center w-12
-              sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer 
-               hover:bg-[#f6eefa] hover:-translate-y-1 duration-500 "
+
+          <div className="w-full max-w-2xl mx-auto overflow-hidden">
+            {[0, 1].map((row) => (
+              <motion.ul
+                key={row}
+                className="flex w-[600%] lg:w-[350%] gap-4 my-2"
+                animate={{ x: row === 0 ? ["0%", "-50%"] : ["-50%", "0%"] }} // move in two direction
+                transition={{
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 60,
+                  ease: "linear",
+                  // offset second row for variation
+                }}
               >
-                <Image src={tool} alt="" className="w-5 sm:w-7 " />
-              </motion.li>
+                {[...toolsData, ...toolsData].map((tool, index) => (
+                  <motion.li
+                    whileHover={{ scale: 1.1 }}
+                    key={`${row}-${index}`}
+                    className="flex items-center justify-center w-12 sm:w-14  aspect-square border border-gray-400 rounded-lg cursor-pointer hover:bg-[#f6eefa] hover:-translate-y-1 duration-500"
+                  >
+                    <Image src={tool} alt="" className="w-5 sm:w-7" />
+                  </motion.li>
+                ))}
+              </motion.ul>
             ))}
-          </motion.ul>
+          </div>
         </motion.div>
       </motion.div>
     </motion.div>

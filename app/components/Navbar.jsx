@@ -55,55 +55,21 @@ const Navbar = () => {
         }`}
         >
           <li>
-            <Link
-              href="/#top"
-              className=""
-              style={{
-                fontFamily: "var(--fontOvo)",
-              }}
-            >
+            <Link href="/#top" className="">
               Home
             </Link>
           </li>
           <li>
-            <Link
-              href="/#about"
-              style={{
-                fontFamily: "var(--fontOvo)",
-              }}
-            >
-              About me
-            </Link>
+            <Link href="/#about">About me</Link>
           </li>
           <li>
-            <Link
-              href="/#services"
-              style={{
-                fontFamily: "var(--fontOvo)",
-              }}
-            >
-              Services
-            </Link>
+            <Link href="/#services">Services</Link>
           </li>
           <li>
-            <Link
-              href="/#work"
-              style={{
-                fontFamily: "var(--fontOvo)",
-              }}
-            >
-              My work
-            </Link>
+            <Link href="/#work">My work</Link>
           </li>
           <li>
-            <Link
-              href="/#contact"
-              style={{
-                fontFamily: "var(--fontOvo)",
-              }}
-            >
-              Contact me
-            </Link>
+            <Link href="/#contact">Contact me</Link>
           </li>
         </ul>
         <div className="flex items-center gap-4">
@@ -161,36 +127,17 @@ const Navbar = () => {
             />
           </div>
           <li>
-            <Link
-              href="/#top"
-              className=""
-              style={{
-                fontFamily: "var(--fontOvo)",
-              }}
-              onClick={closeMenu}
-            >
+            <Link href="/#top" className="" onClick={closeMenu}>
               Home
             </Link>
           </li>
           <li>
-            <Link
-              href="/#about"
-              style={{
-                fontFamily: "var(--fontOvo)",
-              }}
-              onClick={closeMenu}
-            >
+            <Link href="/#about" onClick={closeMenu}>
               About me
             </Link>
           </li>
           <li>
-            <Link
-              href="/#services"
-              style={{
-                fontFamily: "var(--fontOvo)",
-              }}
-              onClick={closeMenu}
-            >
+            <Link href="/#services" onClick={closeMenu}>
               Services
             </Link>
           </li>
