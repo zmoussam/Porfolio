@@ -4,6 +4,7 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import React from "react";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 const Work = () => {
   const { theme } = useTheme();
@@ -49,42 +50,36 @@ const Work = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.9, duration: 0.6 }}
-        className="grid [grid-template-columns:repeat(auto-fit,minmax(200px,1fr))] gap-4 my-10 "
+        className="grid sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-10"
       >
         {workData.map((project, index) => (
           <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
             key={index}
-            className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
-            style={{
-              backgroundImage: `url(${project.bgImage})`,
-            }}
+            className="rounded-xl shadow-md hover:shadow-xl transition overflow-hidden bg-white dark:bg-gray-900"
           >
-            <div
-              className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2
-             -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
-            >
-              <div>
-                <h2 className="font-semibold text-black">{project.title}</h2>
-                <p className="text-sm text-gray-700">{project.description}</p>
-              </div>
-              <div
-                className="border rounded-full border-black w-9 aspect-square 
-              flex items-center justify-center shadow-[2px_2px_0px_#000] group-hover:bg-lime-300 transition"
-              >
-                <Image src={assets.send_icon} alt="send icon" className="w-5" />
-              </div>
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-xl font-semibold">{project.title}</h3>
+              <p className="text-sm text-gray-500 mt-1">{project.type}</p>
+              <p className="text-sm text-gray-600 leading-snug ">
+                {project.description}
+              </p>
             </div>
           </motion.div>
         ))}
       </motion.div>
-      <motion.a
+      <Link
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 1.1, duration: 0.5 }}
-        href=""
-        className="w-max flex items-center gap-2 justify-center text-gray-700 dark:text-white border-[0.5px]
+        href="/work"
+        className="w-max cursor-pointer flex items-center gap-2 justify-center text-gray-700 dark:text-white border-[0.5px]
       border-gray-700 dark:border-gray-400 py-3 rounded-full y-3 px-10 mx-auto my-20 hover:bg-[#f6eefa] duration-500
       dark:hover:bg-[#1e1e1e] "
       >
@@ -98,7 +93,7 @@ const Work = () => {
           alt="right arrow"
           className="w-4"
         />
-      </motion.a>
+      </Link>
     </motion.div>
   );
 };

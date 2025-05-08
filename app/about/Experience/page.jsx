@@ -116,7 +116,7 @@ const Experience = () => {
             }}
             transition={{ duration: 0.3 }}
             key={index}
-            className=" backdrop-blur-[2px] border-[0.5px] p-6 rounded-xl mb-6 flex flex-col gap-4"
+            className=" backdrop-blur-[2px] border-[0.5px] border-gray-300/30 dark:border-gray-500/20  p-6 rounded-xl mb-6 flex flex-col gap-4"
           >
             <div className="flex justify-between items-start flex-wrap">
               <div className="flex items-center gap-4">

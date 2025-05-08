@@ -80,12 +80,7 @@ const About = () => {
             className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl"
           >
             {infoList.map(({ icon, iconDark, title, description }, index) => (
-              <Link
-                href={`/about/${title}`}
-                className="block"
-                key={index}
-                target="_blank"
-              >
+              <Link href={`/about/${title}`} className="block" key={index}>
                 <motion.li
                   whileHover={{ scale: 1.05 }}
                   className="relative min-h-[250px] border-[0.5px] border-gray-400 rounded-xl p-6 

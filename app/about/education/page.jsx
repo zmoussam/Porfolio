@@ -117,7 +117,7 @@ const Education = () => {
             }}
             transition={{ duration: 0.3 }}
             key={index}
-            className=" p-6 rounded-xl mb-6  backdrop-blur-[2px] border-[0.5px]"
+            className=" p-6 rounded-xl mb-6 backdrop-blur-[2px] border-gray-300/30 dark:border-gray-500/20 border-[0.5px]"
           >
             <div className="flex flex-col lg:flex-row gap-6">
               {/* Left: Text Content */}

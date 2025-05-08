@@ -50,12 +50,7 @@ const Services = () => {
         className="grid [grid-template-columns:repeat(auto-fit,minmax(200px,1fr))] gap-4 my-10 "
       >
         {serviceData.map(({ icon, title, description, link }, index) => (
-          <Link
-            href={link}
-            key={index}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href={link} key={index} rel="noopener noreferrer">
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="border border-gray-400 rounded-lg px-8 py-12 

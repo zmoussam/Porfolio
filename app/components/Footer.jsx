@@ -2,6 +2,7 @@ import React from "react";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import { FaPhoneAlt } from "react-icons/fa";
 
 const Footer = () => {
   const { theme, setTheme } = useTheme();
@@ -17,6 +18,10 @@ const Footer = () => {
         <div className="w-max flex items-center gap-2 mx-auto">
           <Image src={assets.mail_icon} alt="" className="w-6" />
           zakariamoussammi.pro07@gmail.com
+        </div>
+        <div className="w-max flex items-center gap-2 mx-auto">
+          <FaPhoneAlt className="w-6 text-gray-500" />
+          +34 674 091 081
         </div>
       </div>
       <div

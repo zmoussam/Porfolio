@@ -14,7 +14,7 @@ import logo from "./logo.png";
 import logo_dark from "./logo_dark.png";
 import mail_icon from "./mail_icon.png";
 import mail_icon_dark from "./mail_icon_dark.png";
-import profile_img from "./90983110.jpg";
+import profile_img from "./profile-img.jpg";
 import download_icon from "./download-icon.png";
 import hand_icon from "./hand-icon.png";
 import header_bg_color from "./header-bg-color.png";
@@ -113,24 +113,46 @@ export const backgroundImage = {
 
 export const workData = [
   {
-    title: "Frontend project",
-    description: "Web Design",
-    bgImage: "/work-1.png",
+    title: "Personal Web Showcase",
+    description:
+      "A custom-built portfolio website to showcase my skills, projects, and achievements. The website is designed with a clean, modern UI, highlighting my experience in web development. It includes sections for project details, a contact form, and my resume, providing potential clients and employers an interactive way to learn more about me.",
+    image: "/work-2.png",
+    type: "Web Application",
   },
   {
-    title: "Geo based app",
-    description: "Mobile App",
-    bgImage: "/work-2.png",
+    type: "C/C++",
+    title: "Multiplayer Pong Game with Real-Time Chat",
+    description:
+      "FT_Transcendence is a real-time multiplayer Pong game platform with user authentication, profiles, and chat. Players can engage in matches, track stats, and interact in public or private chat rooms. Built with NestJS, TypeScript, and PostgreSQL, the platform offers secure, real-time gameplay and social features like friend requests and two-factor authentication.",
+    image: "/work-3.png",
   },
   {
-    title: "Photography site",
-    description: "Web Design",
-    bgImage: "/work-3.png",
+    title: "Mobtwin – Platform for Mobile App Developers & Creatives",
+    description:
+      " Mobtwin is an innovative platform designed to support mobile app developers, entrepreneurs, and creatives. It combines real-time market analytics, AI-powered tools, and no-code features to help users better understand the mobile app ecosystem, create simple apps effortlessly, and stay ahead of market trends. Still under development, this all-in-one solution already provides powerful capabilities for app analysis, creation, and optimization.",
+    image: "/work-1.png",
+    type: "Full stack Web Application",
   },
   {
-    title: "UI/UX designing",
-    description: "UI/UX Design",
-    bgImage: "/work-4.png",
+    type: "Linux - C/C++",
+    title: "Minishell – A Custom Shell in C",
+    description:
+      "A Unix shell built from scratch using C, mimicking essential functionalities of a shell environment. It supports command execution, piping, redirection, environment variable management, and handling of signals, providing a lightweight alternative to the standard shell",
+    image: "/work-4.png",
+  },
+  {
+    type: "C/C++ - Makefile",
+    title: "CUB3D – A 3D Raycasting Engine",
+    description:
+      " A simple 3D game engine built using C, showcasing raycasting techniques for rendering a 3D environment. The project includes basic gameplay mechanics like movement, collision detection, and the ability to navigate through a 3D space, all optimized for performance in a minimalistic design.",
+    image: "/work-5.png",
+  },
+  {
+    type: "Administration - Docker - Docker-compose",
+    title: "Inception – Automated Server Setup",
+    description:
+      "An automation project that creates a fully configured Server environment using Docker and Vagrant. It simplifies the process of setting up development environments by automatically installing required tools, services, and dependencies, ensuring consistency across different systems.",
+    image: "/work-6.png",
   },
 ];
 
@@ -147,21 +169,21 @@ export const serviceData = [
     title: "Infrastructure & Operations",
     description:
       "I design and optimize infrastructure, ensuring reliable, secure, and scalable systems, from cloud setups to server management and performance optimization.",
-    link: "",
+    link: "/services/devops",
   },
   {
     icon: <FaCogs />,
     title: "Advanced Services",
     description:
       "I integrate AI, build real-time apps, and develop GraphQL APIs, while also providing secure authentication, authorization systems, and security optimizations.",
-    link: "",
+    link: "/services/advanced-service",
   },
   {
     icon: <FaTachometerAlt />,
     title: "Product & Performance",
     description:
       "I improve product performance with optimized UI/UX design, ensuring both high performance and exceptional user experiences.",
-    link: "",
+    link: "/services/performance",
   },
 ];
 

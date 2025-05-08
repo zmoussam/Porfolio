@@ -2,49 +2,49 @@
 
 import React from "react";
 import {
-  FaCode,
-  FaServer,
-  FaDatabase,
-  FaClipboardCheck,
-  FaTools,
+  FaProjectDiagram,
+  FaShieldAlt,
+  FaChartLine,
+  FaCubes,
+  FaNetworkWired,
 } from "react-icons/fa";
 import NetworkBackground from "@/app/components/Background";
 import Navbar from "@/app/components/Navbar";
-import Image from "next/image";
 
 const services = [
   {
-    icon: <FaCode className="text-3xl text-indigo-500" />,
-    title: "Frontend Development",
+    icon: <FaProjectDiagram className="text-3xl text-indigo-500" />,
+    title: "System Architecture",
     description:
-      "Responsive, accessible, and pixel-perfect UIs using modern frameworks.",
+      "Design scalable, modular architectures that ensure maintainability and high availability.",
   },
   {
-    icon: <FaServer className="text-3xl text-green-500" />,
-    title: "Backend Development",
+    icon: <FaCubes className="text-3xl text-emerald-500" />,
+    title: "Advanced API Design",
     description:
-      "Robust APIs and server-side logic with secure and scalable architecture.",
+      "Craft RESTful and GraphQL APIs with versioning, validation, and proper error handling.",
   },
   {
-    icon: <FaDatabase className="text-3xl text-yellow-500" />,
-    title: "Database Integration",
+    icon: <FaShieldAlt className="text-3xl text-red-500" />,
+    title: "Security Best Practices",
     description:
-      "Efficient data modeling, queries, and optimization with MongoDB and SQL.",
+      "Implement authentication, authorization, input sanitization, and secure storage techniques.",
   },
   {
-    icon: <FaClipboardCheck className="text-3xl text-pink-500" />,
-    title: "Clean Code & Testing",
-    description: "Maintainable codebase with unit and integration testing.",
+    icon: <FaChartLine className="text-3xl text-yellow-500" />,
+    title: "Performance Optimization",
+    description:
+      "Analyze bottlenecks and optimize both frontend and backend performance for speed and efficiency.",
   },
   {
-    icon: <FaTools className="text-3xl text-red-500" />,
-    title: "Dev Tools & Version Control",
+    icon: <FaNetworkWired className="text-3xl text-blue-500" />,
+    title: "Scalability Strategies",
     description:
-      "Efficient workflows with Git, CI/CD, and modern development tools.",
+      "Design systems that gracefully handle increased traffic through load balancing and horizontal scaling.",
   },
 ];
 
-export default function DevelopmentPage() {
+export default function AdvancedPage() {
   return (
     <div className="relative z-10">
       <Navbar />
@@ -52,11 +52,11 @@ export default function DevelopmentPage() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
         <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
-          Development Services
+          Advanced Services
         </h1>
         <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-12 text-center max-w-2xl mx-auto">
-          I offer a full-stack development experience, combining clean code with
-          solid architecture and modern dev workflows.
+          I provide specialized technical expertise for solving complex problems
+          and elevating product capabilities.
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
