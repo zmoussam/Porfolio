@@ -108,6 +108,15 @@ const Education = () => {
           Here's a quick look at my educational journey, from coding bootcamps
           to formal university studies and language immersion programs.
         </p>
+        <a
+          href="/about/education"
+          className="text-center w-full flex items-center mb-10 justify-center"
+        >
+          <img
+            src="https://badge.mediaplus.ma/binary/zmoussam"
+            alt="zmoussam's 42 stats"
+          />
+        </a>
 
         {educationData.map((item, index) => (
           <motion.div

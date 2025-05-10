@@ -34,6 +34,7 @@ const About = () => {
       >
         About me
       </motion.h2>
+      
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
