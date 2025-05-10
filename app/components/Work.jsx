@@ -75,9 +75,6 @@ const Work = () => {
         ))}
       </motion.div>
       <Link
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 1.1, duration: 0.5 }}
         href="/work"
         className="w-max cursor-pointer flex items-center gap-2 justify-center text-gray-700 dark:text-white border-[0.5px]
       border-gray-700 dark:border-gray-400 py-3 rounded-full y-3 px-10 mx-auto my-20 hover:bg-[#f6eefa] duration-500
