@@ -34,7 +34,7 @@ const About = () => {
       >
         About me
       </motion.h2>
-      
+
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -45,7 +45,7 @@ const About = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          className="flex-none mt-10 max-w-[30%] sm:flex items-center sm:mx-auto rounded-3xl"
+          className="flex-none mt-10   sm:flex items-center sm:mx-auto rounded-3xl"
         >
           <Image
             src={assets.user_image}

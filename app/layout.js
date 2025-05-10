@@ -26,20 +26,23 @@ export default function RootLayout({ children }) {
     setMounted(true);
   }, []);
 
-  if (!mounted) return (
+  if (!mounted)
+    return (
       <html lang="en">
         <head>
           <meta charSet="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </head>
-        <body>
-          {/* Maybe show a loading state */}
-          <div>Loading...</div>
+        <body className="flex items-center justify-center h-screen bg-gray-100">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-24 w-24 border-t-4 border-blue-500 border-solid mx-auto"></div>
+            <p className="mt-4 text-lg text-gray-700">Loading...</p>
+          </div>
         </body>
       </html>
     );
-    
-    return (
+
+  return (
     <html lang="en" className="scroll-smooth">
       <body
         className={`${outfit.className} ${ovo.className} antialiased leading-8
@@ -47,7 +50,7 @@ export default function RootLayout({ children }) {
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
