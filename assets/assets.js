@@ -198,7 +198,7 @@ export const infoList = [
     icon: assets.edu_icon,
     iconDark: assets.edu_icon_dark,
     title: "education",
-    description: "B.Tech in Computer Science",
+    description: "B.Tech in Computer Science, and 42 Network member",
   },
   {
     icon: assets.project_icon,
