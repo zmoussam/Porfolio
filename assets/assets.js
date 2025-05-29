@@ -120,7 +120,7 @@ export const workData = [
     type: "Web Application",
   },
   {
-    type: "C/C++",
+    type: "Full stack Web Application",
     title: "Multiplayer Pong Game with Real-Time Chat",
     description:
       "FT_Transcendence is a real-time multiplayer Pong game platform with user authentication, profiles, and chat. Players can engage in matches, track stats, and interact in public or private chat rooms. Built with NestJS, TypeScript, and PostgreSQL, the platform offers secure, real-time gameplay and social features like friend requests and two-factor authentication.",
